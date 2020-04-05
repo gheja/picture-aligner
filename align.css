@@ -1,0 +1,12 @@
+.col
+{
+	padding-top: 0.5em;
+}
+
+.group
+{
+	padding: 1em;
+	margin: 1em 0;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+}

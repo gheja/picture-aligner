@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Picture aligner</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link rel="stylesheet" href="3rdparty/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" />
+		<script src="3rdparty/jquery/3.4.1/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"></script>
+		<script src="3rdparty/popper.js/1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"></script>
+		<script src="3rdparty/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"></script>
+		<script type="text/javascript" src="align.js"></script>
+		<link rel="stylesheet" href="align.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Picture aligner</h1>
+			
+			<p>
+				This tool calculates the steps needed to align one picture on another by specifying two points on both pictures.
+			</p>
+			
+			<div class="row">
+				<div class="col">
+					<img class="w-100" src="illustration.jpg" alt="Usage of picture aligner tool" />
+				</div>
+			</div>
+			
+			<form action="" onsubmit="run(); return false;">
+				<div class="group">
+					<div class="row">
+						<div class="col">
+							Picture 1
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col">
+							<label for="p1p1x">Point 1 X:</label>
+							<input type="text" class="form-control" id="p1p1x" />
+						</div>
+						<div class="col">
+							<label for="p1p1y">Point 1 Y:</label>
+							<input type="text" class="form-control" id="p1p1y" />
+						</div>
+						<div class="col">
+							<label for="p1p2x">Point 2 X:</label>
+							<input type="text" class="form-control" id="p1p2x" />
+						</div>
+						<div class="col">
+							<label for="p1p2y">Point 2 Y:</label>
+							<input type="text" class="form-control" id="p1p2y" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="group">
+					<div class="row">
+						<div class="col">
+							Picture 2
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col">
+							<label for="p2p1x">Point 1 X:</label>
+							<input type="text" class="form-control" id="p2p1x" />
+						</div>
+						<div class="col">
+							<label for="p2p1y">Point 1 Y:</label>
+							<input type="text" class="form-control" id="p2p1y" />
+						</div>
+						<div class="col">
+							<label for="p2p2x">Point 2 X:</label>
+							<input type="text" class="form-control" id="p2p2x" />
+						</div>
+						<div class="col">
+							<label for="p2p2y">Point 2 Y:</label>
+							<input type="text" class="form-control" id="p2p2y" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col">
+						<label for="mode">Mode:</label>
+						<select class="custom-select w-100" id="mode" required="">
+							 <option value="1">Align the first picture on the second</option>
+					</select>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col">
+						<input type="submit" class="btn btn-primary btn-lg btn-block" type="submit" value="Calculate" />
+					</div>
+				</div>
+			</form>
+			
+			<div class="row">
+				<div class="col">
+					<a href="#" onclick="swapPictures(); return false;">Swap pictures</a>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div id="result" class="col">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
